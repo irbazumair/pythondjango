@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+<title> Home</title>
+
+{% endblock title %}
+
+{% block content %}
+
+    <h1>HI {{request.user.username}}, welcome to my django website!</h1>
+    <a class="btn btn-danger" href="{% url 'logout' %}">logout</a>
+
+{% endblock content %}

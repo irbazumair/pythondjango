@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% block title %}
+<title>Create Post</title>
+{% endblock title %}
+
+    <h1>Create Post<h1>
+    <hr>
+    <form method="post">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+    <button class="btn btn-primary" type="submit">Create Post</button>
+    </form>
+
+    {% if error %}
+
+    <p>{{ error }}</p>
+
+    {% endif%}
+
+{% endblock content %}
